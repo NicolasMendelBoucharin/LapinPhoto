@@ -1,17 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const iframes = document.querySelectorAll(".responsive-iframe");
+    // Paysage : ratio 3/2
+    const iframesLandscape = document.querySelectorAll(".responsive-iframe-landscape");
+    iframesLandscape.forEach((iframe) => {
+        function resizeIframe() {
+            const width = iframe.offsetWidth;
+            const ratio = 2/3;
+            iframe.style.height = (width * ratio) + "px";
+        }
+        resizeIframe();
+        window.addEventListener("resize", resizeIframe);
+    });
 
-    iframes.forEach((iframe) => {
-        iframe.addEventListener("load", function () {
-            try {
-                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-                const iframeBody = iframeDocument.body;
-                const contentHeight = iframeBody.scrollHeight;
-
-                iframe.style.height = contentHeight + "px";
-            } catch (error) {
-                console.warn("Impossible d'ajuster la hauteur de l'iframe pour des raisons de sécurité.");
-            }
-        });
+    // Portrait : ratio 2/3
+    const iframesPortrait = document.querySelectorAll(".responsive-iframe-portrait");
+    iframesPortrait.forEach((iframe) => {
+        function resizeIframe() {
+            const width = iframe.offsetWidth;
+            const ratio = 3/2;
+            iframe.style.height = (width * ratio) + "px";
+        }
+        resizeIframe();
+        window.addEventListener("resize", resizeIframe);
     });
 });
