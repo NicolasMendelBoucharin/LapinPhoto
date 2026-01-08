@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Book</title>
+    <title>Livre photo</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/miffy2.ico" />
 </head>
 <body>
     <header>
-        <h1>Lapin Photos</h1>
+
+        <h1>
+            <img src="assets/images/miffy2.ico" alt="Miffy" style="height: 1em; vertical-align: middle; margin-right: 0em;">
+            Lapin Photos
+        </h1>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="amsterdam.html">Amsterdam</a>
+            <a href="portrait.html">Portraits</a>
             <a href="potpourri.html">Pot Pourri</a>
         </nav>
     </header>
     <main>
-        <section class="gallery-links">
+        <section class="gallery-links" style="text-align:center; margin-top:2em;">
             <h2>Differentes galeries</h2>
-            <ul>
-                <li><a href="amsterdam.html">Amsterdam</a></li>
-                <li><a href="potpourri.html">Pot Pourri</a></li>
-            </ul>
+            <div style="display: flex; justify-content: center; gap: 2em; flex-wrap: wrap; margin-top: 1.5em;">
+                <a href="amsterdam.html" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.10); padding: 2em 2em; text-decoration: none; color: #333; font-size: 1.3em; font-weight: bold; transition: transform 0.2s; display: flex; align-items: center;">
+                    <img src="assets/images/miffy2.ico" alt="Amsterdam" style="height: 2em; margin-right: 0.7em;">Amsterdam
+                </a>
+                <a href="portrait.html" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.10); padding: 2em 2em; text-decoration: none; color: #333; font-size: 1.3em; font-weight: bold; transition: transform 0.2s; display: flex; align-items: center;">
+                    <img src="assets/images/miffy2.ico" alt="Portraits" style="height: 2em; margin-right: 0.7em;">Portraits
+                </a>
+                <a href="potpourri.html" style="background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.10); padding: 2em 2em; text-decoration: none; color: #333; font-size: 1.3em; font-weight: bold; transition: transform 0.2s; display: flex; align-items: center;">
+                    <img src="assets/images/miffy2.ico" alt="Pot Pourri" style="height: 2em; margin-right: 0.7em;">Pot Pourri
+                </a>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; Lapin Photo Book</p>
+        <p>&copy; Livre photo</p>
     </footer>
 </body>
 </html>
