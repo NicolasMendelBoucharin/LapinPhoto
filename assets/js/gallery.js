@@ -8,13 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    // Détecte quelle galerie afficher selon la page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    let galleryType = 'amsterdam'; // défaut
+    // Détecte quelle galerie afficher via data-gallery ou le nom de la page
+    let galleryType = galleryContainer.dataset.gallery;
     
-    if (currentPage.includes('portrait')) galleryType = 'portrait';
-    if (currentPage.includes('concert')) galleryType = 'concert';
-    if (currentPage.includes('potpourri')) galleryType = 'potpourri';
+    if (!galleryType) {
+        const path = window.location.pathname.toLowerCase();
+        if (path.includes('portrait')) galleryType = 'portrait';
+        else if (path.includes('concert')) galleryType = 'concert';
+        else if (path.includes('potpourri')) galleryType = 'potpourri';
+        else galleryType = 'amsterdam';
+    }
+
+    console.log('Galerie chargée:', galleryType);
     
     // Récupère les images de la galerie
     const images = getGalleryPhotos(galleryType);
@@ -29,10 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = document.createElement('img');
         img.src = getPhotoUrl(filename);
         img.alt = filename.replace(/[_-]/g, ' ').replace('.jpg', '');
-        img.loading = 'lazy'; // Chargement efficace
+        img.loading = 'lazy';
         
         const wrapper = document.createElement('div');
         wrapper.className = 'photo-item';
+        wrapper.appendChild(img);
+        
+        galleryContainer.appendChild(wrapper);
+    });
+});
         wrapper.appendChild(img);
         
         galleryContainer.appendChild(wrapper);
