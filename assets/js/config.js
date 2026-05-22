@@ -1,5 +1,5 @@
 // Configuration des galeries
-const GITHUB_RELEASE_URL = 'https://github.com/nicolasmendelboucharin/LapinPhoto/releases/download/v1.0-photos';
+const GITHUB_RELEASE_URL = 'https://raw.githubusercontent.com/NicolasMendelBoucharin/LapinPhoto-photos/main';
 
 const GALLERIES = {
     amsterdam: [
@@ -42,7 +42,7 @@ const GALLERIES = {
         'chevres_pont_30.jpg',
         'chevres_route_31.jpg',
         'croix_sur_neige.jpg',
-        'marche.jpg',
+        'marche.jpg',f
         'Saint-Malo_-_Porte.jpg',
         'Saint-Malo_-_Fort.jpg',
         'Saint-Malo_-_Rocher.jpg',
