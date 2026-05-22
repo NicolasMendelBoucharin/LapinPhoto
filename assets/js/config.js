@@ -1,5 +1,5 @@
 // Configuration des galeries
-const GITHUB_RELEASE_URL = 'https://raw.githubusercontent.com/NicolasMendelBoucharin/LapinPhoto-photos/main';
+const GITHUB_RELEASE_URL = 'https://cdn.jsdelivr.net/gh/NicolasMendelBoucharin/LapinPhoto-photos@main';
 
 const GALLERIES = {
     amsterdam: [
