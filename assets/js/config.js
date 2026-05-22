@@ -8,17 +8,17 @@ const GALLERIES = {
         'Amsterdam_-_Hotel_3.jpg',
         'Amsterdam_-_NDSM_1.jpg',
         'Amsterdam_-_NDSM_2.jpg',
-        'Amsterdam_-_Bâtiment.jpg',
+        'Amsterdam_-_Batiment.jpg',
         'Amsterdam_-_Neiges_et_loups.jpg',
-        'Amsterdam_-_Musée_neige_vélo.jpg',
+        'Amsterdam_-_Musee_neige_velo.jpg',
     ],
     portrait: [
         'Portrait_-_Lolita_Lyssia_balcon.jpg',
         'Portrait_-_Julie_Cevennes.jpg',
         'Portrait_-_Marc_cevnnes.jpg',
         'Portrait_-_Lolita_Bokeh_Amsterdam.jpg',
-        'Portrait_-_Lyssia_sur_le_coté.jpg',
-        'Portrait_-_Lolita_canapé.jpg',
+        'Portrait_-_Lyssia_sur_le_cote.jpg',
+        'Portrait_-_Lolita_canape.jpg',
         'Portrait_-_Lolita.jpg',
         'Portrait_-_Lolita_et_Patrick.jpg',
         'Portrait_-_Nicolas_sur_le_pont.jpg',
@@ -35,20 +35,20 @@ const GALLERIES = {
         'Grandmas_Ashes_-_Batteuse.jpg',
     ],
     potpourri: [
-        'chèvres_pont.jpg',
-        'chèvres_route.jpg',
+        'chevres_pont.jpg',
+        'chevres_route.jpg',
         'abre_orange.jpg',
         'ruches.jpg',
-        'chèvres_pont_30.jpg',
-        'chèvres_route_31.jpg',
+        'chevres_pont_30.jpg',
+        'chevres_route_31.jpg',
         'croix_sur_neige.jpg',
-        'marché.jpg',
+        'marche.jpg',
         'Saint-Malo_-_Porte.jpg',
         'Saint-Malo_-_Fort.jpg',
         'Saint-Malo_-_Rocher.jpg',
-        'Saint-Malo_-_Fenêtre.jpg',
-        'Vieilles_vélos.jpg',
-        'Fête_foraine.jpg',
+        'Saint-Malo_-_Fenetre.jpg',
+        'Vieilles_velos.jpg',
+        'Fete_foraine.jpg',
         'Eau_Courrouze.jpg',
         'William_Courrouze.jpg',
     ]
@@ -56,7 +56,7 @@ const GALLERIES = {
 
 // Fonction pour générer l'URL complète d'une photo
 function getPhotoUrl(filename) {
-    return `${GITHUB_RELEASE_URL}/${encodeURIComponent(filename)}`;
+    return `${GITHUB_RELEASE_URL}/${filename}`;
 }
 
 // Fonction pour obtenir les photos d'une galerie
