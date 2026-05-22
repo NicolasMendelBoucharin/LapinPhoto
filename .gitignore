@@ -35,3 +35,6 @@ Thumbs.db
 
 # Project specific
 photos/
+download-from-drive.py
+extract-urls.py
+retry-download.py
